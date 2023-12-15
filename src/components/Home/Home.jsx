@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 
 const Home = () => {
     return (
-        <div className="w-full h-screen relative pt-20" data-theme="dark">
+        <div className="w-full lg:h-screen relative pt-20">
             <Header></Header>
             <Outlet></Outlet>
         </div>
