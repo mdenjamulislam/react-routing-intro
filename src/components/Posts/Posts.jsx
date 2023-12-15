@@ -4,13 +4,10 @@ import Post from "../Post/Post";
 const Posts = () => {
     const posts = useLoaderData();
     return (
-        <div>
-            <h2>Posts</h2>
-            <div>
-                {
-                    posts.map(post => <Post post={post}></Post>)
-                }
-            </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {
+                posts.map(post => <Post post={post}></Post>)
+            }
         </div>
     );
 };
