@@ -1,16 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
         <div className='absolute top-0 left-0 right-0'>
-            <nav className='py-3 flex justify-center border-b border-b-slate-700'>
-                <ul className='flex gap-4'>
-                    <li><Link to="/" className='text-xl font-bold hover:text-orange-500'>Home</Link></li>
-                    <li><Link to="/about" className='text-xl font-bold hover:text-orange-500'>About</Link></li>
-                    <li><Link to="/contact" className='text-xl font-bold hover:text-orange-500'>Contact</Link></li>
-                    <li><Link to="/users" className='text-xl font-bold hover:text-orange-500'>Users</Link></li>
-                    <li><Link to="/posts" className='text-xl font-bold hover:text-orange-500'>Posts</Link></li>
+            <nav className='py-4 flex justify-center border-b border-b-slate-700'>
+                <ul className='flex gap-8'>
+                    <li className='text-xl font-bold'>
+                        <NavLink to="/" className={({ isActive, isPending }) => isPending ? "underline" : isActive ? "text-orange-500": ""}>Home</NavLink>
+                    </li>
+                    <li className='text-xl font-bold'>
+                        <NavLink to="/about" className={({ isActive, isPending }) => isPending ? "underline" : isActive ? "text-orange-500": ""}>About</NavLink>
+                    </li>
+                    <li className='text-xl font-bold'>
+                        <NavLink to="/contact" className={({ isActive, isPending }) => isPending ? "underline" : isActive ? "text-orange-500": ""}>Contact</NavLink>
+                    </li>
+                    <li className='text-xl font-bold'>
+                        <NavLink to="/users" className={({ isActive, isPending }) => isPending ? "underline" : isActive ? "text-orange-500": ""}>Users</NavLink>
+                    </li>
+                    <li className='text-xl font-bold'>
+                        <NavLink to="/posts" className={({ isActive, isPending }) => isPending ? "underline" : isActive ? "text-orange-500": ""}>Posts</NavLink>
+                    </li>
                 </ul>
             </nav>
         </div>
